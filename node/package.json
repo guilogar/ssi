@@ -1,0 +1,17 @@
+{
+  "name": "ssi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "auth0.js",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
