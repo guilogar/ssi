@@ -1,0 +1,7 @@
+{
+    "require": {
+        "php": "~7.2.0",
+        "ext-phalcon": ">=2.0.9",
+        "ext-intl": "*"
+    }
+}
