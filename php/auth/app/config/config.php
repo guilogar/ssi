@@ -7,13 +7,15 @@
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
-/*
-putenv('DATABASE_ADAPTER=Postgresql');
-putenv('DATABASE_HOST=localhost');
-putenv('DATABASE_NAME=oauth');
-putenv('DATABASE_PASSWORD=root');
-putenv('DATABASE_USERNAME=root');
-*/
+if(!getenv('PRODUCTION'))
+{
+    putenv('DATABASE_ADAPTER=Postgresql');
+    putenv('DATABASE_HOST=localhost');
+    putenv('DATABASE_NAME=oauth');
+    putenv('DATABASE_PASSWORD=root');
+    putenv('DATABASE_USERNAME=root');
+}
+
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => getenv('DATABASE_ADAPTER'),

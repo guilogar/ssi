@@ -1,10 +1,10 @@
 const axios = require('axios');
 
-module.exports.auth = async function ()
+module.exports.auth = async function (url = '')
 {
     const options =
     {
-        url: 'http://ssi-uca.herokuapp.com/auth',
+        url: url,
         data: {
             client_id: "dfgbsahkbkhdf2alsjkdhf",
         },
@@ -27,11 +27,11 @@ module.exports.auth = async function ()
     });
 }
 
-module.exports.getUsers = async function (authString = '', pattern = '')
+module.exports.getUsers = async function (url = '', authString = '', pattern = '')
 {
     const options =
     {
-        url: 'http://ssi-uca.herokuapp.com/api/getUsers/' + pattern,
+        url: url + pattern,
         headers: {
             authorization: authString
         },
