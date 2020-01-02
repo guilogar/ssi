@@ -7,12 +7,13 @@
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
+/*
 putenv('DATABASE_ADAPTER=Postgresql');
-putenv('DATABASE_HOST=ec2-54-247-178-166.eu-west-1.compute.amazonaws.com');
-putenv('DATABASE_NAME=d11odhi30f8dsa');
-putenv('DATABASE_PASSWORD=cbddadbf8088ddca7a8baeb280e61afca38b50409de00d8715ea2a24968b3533');
-putenv('DATABASE_USERNAME=iahfcazxlltdpy');
-
+putenv('DATABASE_HOST=localhost');
+putenv('DATABASE_NAME=oauth');
+putenv('DATABASE_PASSWORD=root');
+putenv('DATABASE_USERNAME=root');
+*/
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => getenv('DATABASE_ADAPTER'),
